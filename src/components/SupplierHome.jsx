@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { motion} from 'motion/react'
+import { motion} from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 const SupplierHome = () => {
+  const navigate = useNavigate();
   const formHandler = (e) => {
     e.preventDefault();
+    navigate(/SupplierHome);
   const inputStyle = {
     padding: '10px',
     margin: '10px',
