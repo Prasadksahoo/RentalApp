@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { motion} from 'motion/react';
-import { useNavigate } from 'react-router-dom';
+import { motion} from 'motion/react'
 const SupplierHome = () => {
-  const navigate = useNavigate();
-  const formHandler = (e) => {
+   const formHandler = (e) => {
     e.preventDefault();
-    
+  }
   const inputStyle = {
     padding: '10px',
     margin: '10px',
@@ -31,7 +29,6 @@ const SupplierHome = () => {
     if (!newCard.name || !newCard.price || !newCard.imageUrl) {
       alert('Please fill all fields');
       return;
-      navigate(/SupplierHome);
     }
 
     const updatedCards = [...cards, newCard];
@@ -56,10 +53,10 @@ const SupplierHome = () => {
       background:"linear-gradient(70deg, #2f343cff, #42536dff)",
        minHeight: '100vh', 
        display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection:"column"}}>
-      <form action=""  onSubmit={(e)=>{
+      <form action=""   onSubmit={(e)=>{
         formHandler(e);
        }}
-        style={{
+       style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
