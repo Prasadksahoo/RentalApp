@@ -5,7 +5,7 @@ const SupplierHome = () => {
   const navigate = useNavigate();
   const formHandler = (e) => {
     e.preventDefault();
-    navigate(/SupplierHome);
+    
   const inputStyle = {
     padding: '10px',
     margin: '10px',
@@ -31,6 +31,7 @@ const SupplierHome = () => {
     if (!newCard.name || !newCard.price || !newCard.imageUrl) {
       alert('Please fill all fields');
       return;
+      navigate(/SupplierHome);
     }
 
     const updatedCards = [...cards, newCard];
