@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion} from 'motion/react'
 const SupplierHome = () => {
+  const formHandler = (e) => {
+    e.preventDefault();
   const inputStyle = {
     padding: '10px',
     margin: '10px',
@@ -50,7 +52,10 @@ const SupplierHome = () => {
       background:"linear-gradient(70deg, #2f343cff, #42536dff)",
        minHeight: '100vh', 
        display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection:"column"}}>
-      <form action="" style={{
+      <form action=""  onSubmit={(e)=>{
+        formHandler(e);
+       }}
+        style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
